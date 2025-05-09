@@ -29,10 +29,14 @@ function Calc(){
     }
     let rep=1;
     let penalty=0;
-    if(document.getElementById("parentattitude").checked){
-        rep*=0.85;
-    }if(document.getElementById("character").checked){
-        rep*=0.9;
+    if(document.getElementById("parentattitude").checked && document.getElementById("character").checked){
+        rep*=1.75
+    }else{
+        if(document.getElementById("parentattitude").checked){
+            rep*=0.85;
+        }if(document.getElementById("character").checked){
+            rep*=0.9;
+        }
     }if(document.getElementById('person').checked){
         penalty=20;
     }
